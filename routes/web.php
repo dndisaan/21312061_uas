@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('uas', UasController::class);
+
+/// Route untuk menampilkan form edit
+Route::get('/mahasiswa/edit/{id}', 'MahasiswaController@edit');
+
+// Route untuk menghapus data mahasiswa
+Route::delete('/mahasiswa/hapus/{id}', 'MahasiswaController@hapus');
+

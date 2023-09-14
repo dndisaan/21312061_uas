@@ -4,6 +4,9 @@
         <div class="card">
             <div class="card-body">
                 <table class="table"> 
+                @section('judul')
+	            Tambah Mahasiswa
+                @endsection
                     <thead>
                         <tr> 
                             <th>NO</th>
